@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 public class Player {
     @Id
     @Column(name = "player_name")
-    private String playerName;
+    private String name;
     private String nation;
     private String position;
     private Integer age;
@@ -33,15 +33,15 @@ public class Player {
     @Column(name = "expected_assists")
     private Double expectedAssists;
     @Column(name = "team_name")
-    private String teamName;
+    private String team;
 
 
     // CONSTRUCTOR
     public Player() {
     }
 
-    public Player(String playerName, String nation, String position, Integer age, Integer matchesPlayed, Integer starts, Double minutesPlayed, Double goals, Double assists, Double penaltiesScored, Double yellowCards, Double redCards, Double expectedGoals, Double expectedAssists, String teamName) {
-        this.playerName = playerName;
+    public Player(String name, String nation, String position, Integer age, Integer matchesPlayed, Integer starts, Double minutesPlayed, Double goals, Double assists, Double penaltiesScored, Double yellowCards, Double redCards, Double expectedGoals, Double expectedAssists, String team) {
+        this.name = name;
         this.nation = nation;
         this.position = position;
         this.age = age;
@@ -55,20 +55,20 @@ public class Player {
         this.redCards = redCards;
         this.expectedGoals = expectedGoals;
         this.expectedAssists = expectedAssists;
-        this.teamName = teamName;
+        this.team = team;
     }
 
-    public Player(String playerName) {
-        this.playerName = playerName;
+    public Player(String name) {
+        this.name = name;
     }
 
     // GETTERS & SETTERS
-    public String getPlayerName() {
-        return playerName;
+    public String getName() {
+        return name;
     }
 
-    public void setPlayerName(String playerName) {
-        this.playerName = playerName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getNation() {
@@ -175,12 +175,12 @@ public class Player {
         this.expectedAssists = expectedAssists;
     }
 
-    public String getTeamName() {
-        return teamName;
+    public String getTeam() {
+        return team;
     }
 
-    public void setTeamName(String teamName) {
-        this.teamName = teamName;
+    public void setTeam(String team) {
+        this.team = team;
     }
 
 
