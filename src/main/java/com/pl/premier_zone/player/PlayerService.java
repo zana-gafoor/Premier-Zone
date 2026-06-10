@@ -1,14 +1,15 @@
 package com.pl.premier_zone.player;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@Component
+@Service
+@Transactional(readOnly = true)
 public class PlayerService {
     private final PlayerRepository playerRepository;
 
