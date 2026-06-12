@@ -36,7 +36,7 @@ public class PlayerService {
 
     public List<Player> getPlayersByPosition(String searchText) {
         return playerRepository.findAll().stream()
-                .filter(player ->
+                .filter(player -> player.getPosition() != null &&
                         player.getPosition().toLowerCase().contains(searchText.toLowerCase()))
                 .collect(Collectors.toList());
     }
